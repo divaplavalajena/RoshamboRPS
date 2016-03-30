@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Play View Controller-->
@@ -18,62 +17,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4R-mh-4IM">
-                                <rect key="frame" x="148" y="228" width="75" height="65"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4R-mh-4IM" userLabel="RockButton">
+                                <rect key="frame" x="168" y="267" width="75" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="Nug-7l-Pfa"/>
-                                    <constraint firstAttribute="width" constant="75" id="Rwd-sq-tJb"/>
+                                    <constraint firstAttribute="height" constant="65" id="CfH-SJ-59w"/>
+                                    <constraint firstAttribute="width" constant="75" id="vDP-f8-OnN"/>
                                 </constraints>
                                 <state key="normal" image="rock.png"/>
                                 <connections>
                                     <action selector="playRoshambo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VDk-Pp-Bnk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3b-KA-LzP">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3b-KA-LzP" userLabel="PaperButton">
                                 <rect key="frame" x="263" y="131" width="75" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="L1F-EC-QPt"/>
-                                    <constraint firstAttribute="width" constant="75" id="sKH-Lq-HdN"/>
+                                    <constraint firstAttribute="height" constant="65" id="VP7-5Q-U2y"/>
+                                    <constraint firstAttribute="width" constant="75" id="itw-fh-NF9"/>
                                 </constraints>
                                 <state key="normal" image="paper.png"/>
                                 <connections>
-                                    <action selector="playRoshambo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q2P-9G-SCj"/>
+                                    <action selector="paperSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uaR-47-grr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07L-vw-c7R">
-                                <rect key="frame" x="250" y="371" width="101" height="21"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDf-Vy-R4H" userLabel="ScissorsButton">
+                                <rect key="frame" x="353" y="267" width="75" height="65"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="101" id="ObY-4D-JBS"/>
-                                    <constraint firstAttribute="height" constant="21" id="ei1-XH-9dQ"/>
+                                    <constraint firstAttribute="height" constant="65" id="Ech-Sb-ScX"/>
+                                    <constraint firstAttribute="width" constant="75" id="Pom-0D-LSC"/>
+                                </constraints>
+                                <state key="normal" image="scissors.png"/>
+                                <connections>
+                                    <action selector="scissorsSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HqE-mj-zvd"/>
+                                    <segue destination="2pv-qf-D6s" kind="presentation" identifier="scissorsSegue" id="gTF-ET-a7b"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07L-vw-c7R">
+                                <rect key="frame" x="168" y="387" width="260" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="58D-6D-2VS"/>
+                                    <constraint firstAttribute="width" constant="260" id="FzW-XI-rQe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDf-Vy-R4H">
-                                <rect key="frame" x="373" y="228" width="75" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="D6R-Rg-8Lo"/>
-                                    <constraint firstAttribute="height" constant="65" id="gdT-om-sLU"/>
-                                </constraints>
-                                <state key="normal" image="scissors.png"/>
-                                <connections>
-                                    <action selector="playRoshambo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HIj-tZ-vuL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="07L-vw-c7R" firstAttribute="top" secondItem="x3b-KA-LzP" secondAttribute="bottom" constant="175" id="3xs-u4-w9a"/>
-                            <constraint firstItem="x3b-KA-LzP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="111" id="4lL-0j-dPD"/>
-                            <constraint firstItem="M4R-mh-4IM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="148" id="NGP-DM-Do7"/>
-                            <constraint firstItem="uDf-Vy-R4H" firstAttribute="leading" secondItem="M4R-mh-4IM" secondAttribute="trailing" constant="150" id="TcB-W7-eHb"/>
-                            <constraint firstItem="07L-vw-c7R" firstAttribute="centerX" secondItem="x3b-KA-LzP" secondAttribute="centerX" id="c9d-mj-zeE"/>
-                            <constraint firstItem="M4R-mh-4IM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="208" id="euW-UJ-yGd"/>
-                            <constraint firstItem="uDf-Vy-R4H" firstAttribute="top" secondItem="M4R-mh-4IM" secondAttribute="top" id="lKK-Ib-M8m"/>
-                            <constraint firstItem="x3b-KA-LzP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="243" id="nd4-XO-dqZ"/>
+                            <constraint firstItem="07L-vw-c7R" firstAttribute="top" secondItem="x3b-KA-LzP" secondAttribute="bottom" constant="191" id="7km-67-7Sh"/>
+                            <constraint firstItem="uDf-Vy-R4H" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="990-xy-N5X"/>
+                            <constraint firstItem="x3b-KA-LzP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BYd-Uv-w4D"/>
+                            <constraint firstItem="07L-vw-c7R" firstAttribute="top" secondItem="uDf-Vy-R4H" secondAttribute="bottom" constant="55" id="Ecb-cL-l4n"/>
+                            <constraint firstItem="uDf-Vy-R4H" firstAttribute="leading" secondItem="M4R-mh-4IM" secondAttribute="trailing" constant="110" id="doA-wQ-ckR"/>
+                            <constraint firstItem="07L-vw-c7R" firstAttribute="top" secondItem="M4R-mh-4IM" secondAttribute="bottom" constant="55" id="fn1-IB-D5Q"/>
+                            <constraint firstItem="x3b-KA-LzP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="111" id="o7I-CY-k7j"/>
+                            <constraint firstItem="M4R-mh-4IM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oVA-2L-QgB"/>
+                            <constraint firstItem="07L-vw-c7R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-2" id="pPZ-Vg-tZg"/>
+                            <constraint firstItem="M4R-mh-4IM" firstAttribute="leading" secondItem="07L-vw-c7R" secondAttribute="leading" id="qMF-Dr-IeA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="2pv-qf-D6s" kind="presentation" identifier="paperSegue" id="T4w-36-G3p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,7 +87,7 @@
         <!--Results View Controller-->
         <scene sceneID="7UH-zf-Wu3">
             <objects>
-                <viewController id="2pv-qf-D6s" customClass="ResultsViewController" customModule="RoshamboRPS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultsViewController" id="2pv-qf-D6s" customClass="ResultsViewController" customModule="RoshamboRPS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hnO-gr-DQZ"/>
                         <viewControllerLayoutGuide type="bottom" id="fHC-pL-zEV"/>
@@ -94,40 +99,40 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJj-rt-yST">
                                 <rect key="frame" x="258" y="409" width="84" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="FlN-f9-uLl"/>
-                                    <constraint firstAttribute="height" constant="30" id="v9c-47-3tx"/>
+                                    <constraint firstAttribute="height" constant="30" id="KEo-4K-j1b"/>
+                                    <constraint firstAttribute="width" constant="84" id="h0L-7Y-pw3"/>
                                 </constraints>
                                 <state key="normal" title="Play Again"/>
                                 <connections>
                                     <action selector="playAgainButton:" destination="2pv-qf-D6s" eventType="touchUpInside" id="E9s-rH-bGL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLN-6d-045">
-                                <rect key="frame" x="279" y="309" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLN-6d-045">
+                                <rect key="frame" x="20" y="309" width="560" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="CNr-Tc-wBp"/>
-                                    <constraint firstAttribute="height" constant="21" id="dFs-fM-ODa"/>
+                                    <constraint firstAttribute="height" constant="36" id="9CX-l7-5ux"/>
+                                    <constraint firstAttribute="width" constant="560" id="QlJ-39-3Jf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cjC-99-vLn">
                                 <rect key="frame" x="180" y="65" width="240" height="207"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Jqn-Gp-G7x"/>
-                                    <constraint firstAttribute="height" constant="207" id="r31-at-WRE"/>
+                                    <constraint firstAttribute="height" constant="207" id="7kc-dJ-Ldd"/>
+                                    <constraint firstAttribute="width" constant="240" id="Hsh-oa-JJK"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cjC-99-vLn" firstAttribute="top" secondItem="hnO-gr-DQZ" secondAttribute="bottom" constant="45" id="0fD-78-97L"/>
-                            <constraint firstItem="BLN-6d-045" firstAttribute="centerX" secondItem="cjC-99-vLn" secondAttribute="centerX" id="9ql-uH-mEM"/>
-                            <constraint firstItem="cjC-99-vLn" firstAttribute="leading" secondItem="Mpt-u8-3KA" secondAttribute="leadingMargin" constant="160" id="cFL-bB-JCK"/>
-                            <constraint firstItem="BLN-6d-045" firstAttribute="centerX" secondItem="YJj-rt-yST" secondAttribute="centerX" id="chm-GP-DGd"/>
-                            <constraint firstItem="YJj-rt-yST" firstAttribute="top" secondItem="BLN-6d-045" secondAttribute="bottom" constant="79" id="dxF-JK-say"/>
-                            <constraint firstItem="BLN-6d-045" firstAttribute="top" secondItem="cjC-99-vLn" secondAttribute="bottom" constant="37" id="tlG-hD-e3R"/>
+                            <constraint firstItem="cjC-99-vLn" firstAttribute="top" secondItem="hnO-gr-DQZ" secondAttribute="bottom" constant="45" id="XdQ-r9-TxB"/>
+                            <constraint firstItem="YJj-rt-yST" firstAttribute="centerX" secondItem="Mpt-u8-3KA" secondAttribute="centerX" id="fiG-Pr-3PF"/>
+                            <constraint firstItem="BLN-6d-045" firstAttribute="centerX" secondItem="Mpt-u8-3KA" secondAttribute="centerX" id="otB-wv-VVd"/>
+                            <constraint firstItem="cjC-99-vLn" firstAttribute="centerX" secondItem="Mpt-u8-3KA" secondAttribute="centerX" id="rEt-se-omK"/>
+                            <constraint firstItem="BLN-6d-045" firstAttribute="top" secondItem="cjC-99-vLn" secondAttribute="bottom" constant="37" id="uhN-iS-Tds"/>
+                            <constraint firstItem="YJj-rt-yST" firstAttribute="top" secondItem="BLN-6d-045" secondAttribute="bottom" constant="64" id="uws-5L-hbk"/>
                         </constraints>
                     </view>
                     <connections>
@@ -145,4 +150,7 @@
         <image name="rock.png" width="75" height="65"/>
         <image name="scissors.png" width="75" height="65"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gTF-ET-a7b"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -10,22 +10,55 @@ import UIKit
 
 class ResultsViewController: UIViewController {
     
-    @IBOutlet var resultsImageOutlet: UIImageView!
+    var roshamboResult: Int?
+    var sender: Int?
     
+    
+    @IBOutlet var resultsImageOutlet: UIImageView!
     @IBOutlet var resultsLabelOutlet: UILabel!
     
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+        if roshamboResult == 4 {
+            resultsImageOutlet.image = UIImage(named: "itsATie.png")
+            resultsLabelOutlet.text = "No one wins.  It's a Tie!"
+        
+        } else if sender == 1 && roshamboResult == 1 {
+            resultsImageOutlet.image = UIImage(named: "RockCrushesScissors.jpeg")
+            resultsLabelOutlet.text = "You WIN! Rock crushes Scissors!"
+        } else if sender == 2 && roshamboResult == 2 {
+            resultsImageOutlet.image = UIImage(named: "PaperCoversRock.jpg")
+            resultsLabelOutlet.text = "You WIN! Paper Covers Rock!"
+        } else if sender == 3 && roshamboResult == 3 {
+            resultsImageOutlet.image = UIImage(named: "ScissorsCutPaper.jpg")
+            resultsLabelOutlet.text = "You WIN! Scissors Cut Paper!"
+        } else if sender != roshamboResult {
+            switch roshamboResult! {
+            case 1:
+                resultsImageOutlet.image = UIImage(named: "RockCrushesScissors.jpeg")
+                resultsLabelOutlet.text = "You lose. Rock crushes Scissors!"
+            case 2:
+                resultsImageOutlet.image = UIImage(named: "PaperCoversRock.jpg")
+                resultsLabelOutlet.text = "You lose. Paper Covers Rock!"
+            case 3:
+                resultsImageOutlet.image = UIImage(named: "ScissorsCutPaper.jpg")
+                resultsLabelOutlet.text = "You lose. Scissors Cut Paper!"
+            default:
+                resultsImageOutlet.image = UIImage(named: "itsATie.png")
+                resultsLabelOutlet.text = "No one wins.  It's a Tie!"
+            }
+        }
+        
+        
     }
     
     
     @IBAction func playAgainButton(sender: AnyObject) {
-        
-        
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 
   
