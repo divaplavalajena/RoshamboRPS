@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		9CEAAB1D1CAC24ED00928779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAAB1C1CAC24ED00928779 /* AppDelegate.swift */; };
-		9CEAAB1F1CAC24ED00928779 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAAB1E1CAC24ED00928779 /* ViewController.swift */; };
+		9CEAAB1F1CAC24ED00928779 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAAB1E1CAC24ED00928779 /* PlayViewController.swift */; };
 		9CEAAB221CAC24ED00928779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CEAAB201CAC24ED00928779 /* Main.storyboard */; };
 		9CEAAB241CAC24ED00928779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CEAAB231CAC24ED00928779 /* Assets.xcassets */; };
 		9CEAAB271CAC24ED00928779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CEAAB251CAC24ED00928779 /* LaunchScreen.storyboard */; };
 		9CEAAB321CAC24ED00928779 /* RoshamboRPSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAAB311CAC24ED00928779 /* RoshamboRPSTests.swift */; };
 		9CEAAB3D1CAC24ED00928779 /* RoshamboRPSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAAB3C1CAC24ED00928779 /* RoshamboRPSUITests.swift */; };
+		9CEAAB521CAC259700928779 /* itsATie.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CEAAB4B1CAC259700928779 /* itsATie.png */; };
+		9CEAAB531CAC259700928779 /* paper.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CEAAB4C1CAC259700928779 /* paper.png */; };
+		9CEAAB541CAC259700928779 /* PaperCoversRock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CEAAB4D1CAC259700928779 /* PaperCoversRock.jpg */; };
+		9CEAAB551CAC259700928779 /* rock.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CEAAB4E1CAC259700928779 /* rock.png */; };
+		9CEAAB561CAC259700928779 /* RockCrushesScissors.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 9CEAAB4F1CAC259700928779 /* RockCrushesScissors.jpeg */; };
+		9CEAAB571CAC259700928779 /* scissors.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CEAAB501CAC259700928779 /* scissors.png */; };
+		9CEAAB581CAC259700928779 /* ScissorsCutPaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CEAAB511CAC259700928779 /* ScissorsCutPaper.jpg */; };
+		9CEAAB5A1CAC289B00928779 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAAB591CAC289B00928779 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +44,7 @@
 /* Begin PBXFileReference section */
 		9CEAAB191CAC24ED00928779 /* RoshamboRPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoshamboRPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEAAB1C1CAC24ED00928779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9CEAAB1E1CAC24ED00928779 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9CEAAB1E1CAC24ED00928779 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		9CEAAB211CAC24ED00928779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CEAAB231CAC24ED00928779 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CEAAB261CAC24ED00928779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +55,14 @@
 		9CEAAB381CAC24ED00928779 /* RoshamboRPSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoshamboRPSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEAAB3C1CAC24ED00928779 /* RoshamboRPSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshamboRPSUITests.swift; sourceTree = "<group>"; };
 		9CEAAB3E1CAC24ED00928779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CEAAB4B1CAC259700928779 /* itsATie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = itsATie.png; sourceTree = "<group>"; };
+		9CEAAB4C1CAC259700928779 /* paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper.png; sourceTree = "<group>"; };
+		9CEAAB4D1CAC259700928779 /* PaperCoversRock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PaperCoversRock.jpg; sourceTree = "<group>"; };
+		9CEAAB4E1CAC259700928779 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
+		9CEAAB4F1CAC259700928779 /* RockCrushesScissors.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RockCrushesScissors.jpeg; sourceTree = "<group>"; };
+		9CEAAB501CAC259700928779 /* scissors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scissors.png; sourceTree = "<group>"; };
+		9CEAAB511CAC259700928779 /* ScissorsCutPaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ScissorsCutPaper.jpg; sourceTree = "<group>"; };
+		9CEAAB591CAC289B00928779 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +114,10 @@
 			isa = PBXGroup;
 			children = (
 				9CEAAB1C1CAC24ED00928779 /* AppDelegate.swift */,
-				9CEAAB1E1CAC24ED00928779 /* ViewController.swift */,
+				9CEAAB1E1CAC24ED00928779 /* PlayViewController.swift */,
 				9CEAAB201CAC24ED00928779 /* Main.storyboard */,
+				9CEAAB591CAC289B00928779 /* ResultsViewController.swift */,
+				9CEAAB4A1CAC259700928779 /* Roshambo_ImageAssets */,
 				9CEAAB231CAC24ED00928779 /* Assets.xcassets */,
 				9CEAAB251CAC24ED00928779 /* LaunchScreen.storyboard */,
 				9CEAAB281CAC24ED00928779 /* Info.plist */,
@@ -123,6 +141,20 @@
 				9CEAAB3E1CAC24ED00928779 /* Info.plist */,
 			);
 			path = RoshamboRPSUITests;
+			sourceTree = "<group>";
+		};
+		9CEAAB4A1CAC259700928779 /* Roshambo_ImageAssets */ = {
+			isa = PBXGroup;
+			children = (
+				9CEAAB4B1CAC259700928779 /* itsATie.png */,
+				9CEAAB4C1CAC259700928779 /* paper.png */,
+				9CEAAB4D1CAC259700928779 /* PaperCoversRock.jpg */,
+				9CEAAB4E1CAC259700928779 /* rock.png */,
+				9CEAAB4F1CAC259700928779 /* RockCrushesScissors.jpeg */,
+				9CEAAB501CAC259700928779 /* scissors.png */,
+				9CEAAB511CAC259700928779 /* ScissorsCutPaper.jpg */,
+			);
+			path = Roshambo_ImageAssets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +261,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CEAAB581CAC259700928779 /* ScissorsCutPaper.jpg in Resources */,
 				9CEAAB271CAC24ED00928779 /* LaunchScreen.storyboard in Resources */,
+				9CEAAB561CAC259700928779 /* RockCrushesScissors.jpeg in Resources */,
+				9CEAAB531CAC259700928779 /* paper.png in Resources */,
+				9CEAAB521CAC259700928779 /* itsATie.png in Resources */,
+				9CEAAB551CAC259700928779 /* rock.png in Resources */,
+				9CEAAB541CAC259700928779 /* PaperCoversRock.jpg in Resources */,
 				9CEAAB241CAC24ED00928779 /* Assets.xcassets in Resources */,
 				9CEAAB221CAC24ED00928779 /* Main.storyboard in Resources */,
+				9CEAAB571CAC259700928779 /* scissors.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CEAAB1F1CAC24ED00928779 /* ViewController.swift in Sources */,
+				9CEAAB1F1CAC24ED00928779 /* PlayViewController.swift in Sources */,
 				9CEAAB1D1CAC24ED00928779 /* AppDelegate.swift in Sources */,
+				9CEAAB5A1CAC289B00928779 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
