@@ -47,7 +47,6 @@
                                 </constraints>
                                 <state key="normal" image="scissors.png"/>
                                 <connections>
-                                    <action selector="scissorsSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HqE-mj-zvd"/>
                                     <segue destination="2pv-qf-D6s" kind="presentation" identifier="scissorsSegue" id="gTF-ET-a7b"/>
                                 </connections>
                             </button>
@@ -151,6 +150,6 @@
         <image name="scissors.png" width="75" height="65"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gTF-ET-a7b"/>
+        <segue reference="T4w-36-G3p"/>
     </inferredMetricsTieBreakers>
 </document>

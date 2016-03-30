@@ -38,20 +38,16 @@ class PlayViewController: UIViewController {
             controller.roshamboResult = roshamboResult
             controller.sender = senderInt
         } else if segue.identifier == "scissorsSegue" {
+            let sender2 = sender as! UIButton
+            roshamboResult = getRoshamboResult(sender as! UIButton)
+            
             let controller = segue.destinationViewController as! ResultsViewController
             controller.roshamboResult = roshamboResult
-            controller.sender = senderInt
+            controller.sender = sender2.tag
         }
     }
     
-    
-    @IBAction func scissorsSegue(sender: AnyObject) {
-        //This button is connected to the scissorsSegue button for the segue Only completion
-        roshamboResult = getRoshamboResult(sender)
-        senderInt = sender.tag
-        
-        performSegueWithIdentifier("scissorsSegue", sender: self)
-    }
+
     
     
     @IBAction func paperSegue(sender: AnyObject) {
