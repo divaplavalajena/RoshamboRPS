@@ -14,24 +14,13 @@ class PlayViewController: UIViewController {
     var roshamboResult: Int?
     var senderInt: Int?
     
-    
-    
-    /**
-     * Randomly generates an Int from 1 to 3
-     */
-    func randomValue() -> Int {
-        // Generate a random Int32 using arc4Random
-        let randomValue = 1 + arc4random() % 3
-        
-        // Return a more convenient Int, initialized with the random value
-        return Int(randomValue)
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    // MARK: Segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "paperSegue" {
             let controller = segue.destinationViewController as! ResultsViewController
@@ -47,9 +36,7 @@ class PlayViewController: UIViewController {
         }
     }
     
-
-    
-    
+    // MARK: Segue with Code Approach
     @IBAction func paperSegue(sender: AnyObject) {
         //This button is connected to the paperSegue button for the code + segue completion
         roshamboResult = getRoshamboResult(sender)
@@ -59,9 +46,9 @@ class PlayViewController: UIViewController {
     }
     
 
-    
+    // MARK: Programmatic Approach
     @IBAction func playRoshambo(sender: AnyObject) {
-        //This method is connected to the RockButton for the segue
+        //This method is connected to the RockButton for the programmatic segue
         
         //call method to play game and produce result here - using sender tag
         roshamboResult = getRoshamboResult(sender)
@@ -77,8 +64,19 @@ class PlayViewController: UIViewController {
         
     }
     
+    // MARK: Utilities
     
+    /**
+    * Randomly generates an Int from 1 to 3
+    */
+    func randomValue() -> Int {
+        // Generate a random number using arc4Random
+        let randomValue = 1 + arc4random() % 3
+        
+        return Int(randomValue)
+    }
     
+    //Method which compares button press sender.tag to random number to determine winner
     func getRoshamboResult(sender: AnyObject) -> Int {
         var result: Int = 0
         let sender = sender.tag
