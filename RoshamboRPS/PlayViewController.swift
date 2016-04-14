@@ -14,11 +14,22 @@ class PlayViewController: UIViewController {
     var roshamboResult: Int?
     var senderInt: Int?
     
+    var history = [History]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    @IBAction func showHistory(sender: AnyObject) {
+        let storyboard = self.storyboard
+        let controller = storyboard?.instantiateViewControllerWithIdentifier("HistoryViewController")as! HistoryViewController
+        
+        controller.history = self.history
+        
+        self.presentViewController(controller, animated: true, completion: nil)
+    }
+    
     
     // MARK: Segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -93,7 +104,77 @@ class PlayViewController: UIViewController {
             result = 3
         }
         
+        matchHistory(sender, result: result)
+        
         return result
+    }
+    
+    func matchHistory(sender: Int, result: Int) {
+        let senderInt = sender
+        let result = result
+        var matchResult: String = ""
+        var matchType: String = ""
+        
+        
+        
+        if result == 4 {
+            //resultsImageOutlet.image = UIImage(named: "itsATie.png")
+            //resultsLabelOutlet.text = "No one wins.  It's a Tie!"
+            matchResult = "It's a Tie!"
+            switch senderInt {
+            case 1:
+                matchType = "Rock vs Rock"
+            case 2:
+                matchType = "Paper vs Paper"
+            case 3:
+                matchType = "Scissors vs Scissors"
+            default:
+                print("Default case called in tie switch")
+            }
+            
+        } else if senderInt == 1 && result == 1 {
+            //resultsImageOutlet.image = UIImage(named: "RockCrushesScissors.jpeg")
+            //resultsLabelOutlet.text = "You WIN! Rock crushes Scissors!"
+            matchResult = "You WIN!"
+            matchType = "Rock vs Scissors"
+        } else if senderInt == 2 && result == 2 {
+            //resultsImageOutlet.image = UIImage(named: "PaperCoversRock.jpg")
+            //resultsLabelOutlet.text = "You WIN! Paper Covers Rock!"
+            matchResult = "You WIN!"
+            matchType = "Paper vs Rock"
+        } else if senderInt == 3 && result == 3 {
+            //resultsImageOutlet.image = UIImage(named: "ScissorsCutPaper.jpg")
+            //resultsLabelOutlet.text = "You WIN! Scissors Cut Paper!"
+            matchResult = "You WIN!"
+            matchType = "Scissors vs Paper"
+        } else if senderInt != result {
+            switch result {
+            case 1:
+                //resultsImageOutlet.image = UIImage(named: "RockCrushesScissors.jpeg")
+                //resultsLabelOutlet.text = "You lose. Rock crushes Scissors!"
+                matchResult = "You Lose."
+                matchType = "Scissors vs Rock"
+            case 2:
+                //resultsImageOutlet.image = UIImage(named: "PaperCoversRock.jpg")
+                //resultsLabelOutlet.text = "You lose. Paper Covers Rock!"
+                matchResult = "You Lose."
+                matchType = "Rock vs Paper"
+            case 3:
+                //resultsImageOutlet.image = UIImage(named: "ScissorsCutPaper.jpg")
+                //resultsLabelOutlet.text = "You lose. Scissors Cut Paper!"
+                matchResult = "You Lose."
+                matchType = "Paper vs Scissors"
+            default:
+                //resultsImageOutlet.image = UIImage(named: "itsATie.png")
+                //resultsLabelOutlet.text = "No one wins.  It's a Tie!"
+                print("Default case called in tie switch")
+            }
+        }
+        
+        let matchDetails = History(matchResult: matchResult, matchType: matchType)
+
+        history.append(matchDetails)
+        
     }
     
 
